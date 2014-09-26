@@ -39,7 +39,7 @@ SEND_SUBSCRIBERS_EMAIL_CONFIRMATION = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'glucosetracker',
+        'NAME': os.environ['DATABASE_NAME'],
         'USER': 'glucosetracker',
         'PASSWORD': 'password',
         'HOST': os.environ.get('POSTGRESQL_HOST', 'localhost'),
